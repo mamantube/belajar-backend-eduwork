@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "029b6ee1-a623-4041-9fba-71070f38d59c",
+		"name": "SEWAMOBIL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25771115",
+		"_collection_link": "https://galactic-water-910002.postman.co/workspace/Team-Workspace~30eabd65-1a20-4f92-8911-13a72971d9bb/collection/25771115-029b6ee1-a623-4041-9fba-71070f38d59c?action=share&source=collection_link&creator=25771115"
+	},
+	"item": [
+		{
+			"name": "SEWAMOBIL",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mazda CX-3\",\r\n    \"storage_id\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://belajar-backend-eduwork.vercel.app/api/v2/products/new",
+							"protocol": "https",
+							"host": [
+								"belajar-backend-eduwork",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"v2",
+								"products",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://belajar-backend-eduwork.vercel.app/api/v2/products?q=&page=1&per_page=10",
+							"protocol": "https",
+							"host": [
+								"belajar-backend-eduwork",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"v2",
+								"products"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": ""
+								},
+								{
+									"key": "sort_by",
+									"value": "DESC",
+									"description": "ASC, DESC",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DetailData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://belajar-backend-eduwork.vercel.app/api/v2/products/:id",
+							"protocol": "https",
+							"host": [
+								"belajar-backend-eduwork",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"v2",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateData",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Toyota Avanza\",\r\n    \"storage_id\" : 1,\r\n    \"deleted_at\" : \"2023-10-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://belajar-backend-eduwork.vercel.app/api/v2/products/:id",
+							"protocol": "https",
+							"host": [
+								"belajar-backend-eduwork",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"v2",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RestroreData",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://belajar-backend-eduwork.vercel.app/api/v2/products/:id",
+							"protocol": "https",
+							"host": [
+								"belajar-backend-eduwork",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"v2",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SoftDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://belajar-backend-eduwork.vercel.app/api/v2/products/remove/:id",
+							"protocol": "https",
+							"host": [
+								"belajar-backend-eduwork",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"v2",
+								"products",
+								"remove",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HardDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://belajar-backend-eduwork.vercel.app/api/v2/products/:id",
+							"protocol": "https",
+							"host": [
+								"belajar-backend-eduwork",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"v2",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
